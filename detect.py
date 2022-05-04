@@ -49,7 +49,7 @@ def detect(save_img=False):
         cudnn.benchmark = True  # set True to speed up constant image size inference
         dataset = LoadStreams(source, img_size=imgsz, stride=stride)
     else:
-        save_img = True
+        save_img = False
         dataset = LoadImages(source, img_size=imgsz, stride=stride)
 
     # Get names and colors
